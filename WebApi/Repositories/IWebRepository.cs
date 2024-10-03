@@ -11,9 +11,10 @@ namespace WebApi.Repositories
         T GetById(int id);
         IEnumerable<T> GetAll();
         IEnumerable<T> GetAllExcludingIds(IEnumerable<int> idsToExclude);
-        void Create(T entity);
-        void Update(int id, T entity);
+        int Create(T entity);
+        int Update(int id, T entity);
         string Delete(int id);
         IEnumerable<T> GetAllWithFields(IEnumerable<string> fields);
+        int GetMaxId();
     }
 }
