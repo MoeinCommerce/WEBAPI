@@ -17,7 +17,7 @@ namespace WebApi.Models
         public string Status { get; set; }
         public string Description { get; set; }
         public string Sku { get; set; }
-        public string Price { get; set; }
+        public string BuyPrice { get; set; }
         public string RegularPrice { get; set; }
         public string SalePrice { get; set; }
         public int StockQuantity { get; set; }
