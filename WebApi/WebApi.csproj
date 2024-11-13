@@ -73,17 +73,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contexts\BaseWebContext.cs" />
     <Compile Include="Contexts\Interfaces\IWebContext.cs" />
+    <Compile Include="Exceptions\DoesNotExistException.cs" />
+    <Compile Include="Exceptions\ExceptionModel.cs" />
+    <Compile Include="Exceptions\InvalidFieldException.cs" />
     <Compile Include="IWebInformation.cs" />
     <Compile Include="Models\WebCategory.cs" />
+    <Compile Include="Models\WebConfig.cs" />
     <Compile Include="Models\WebOrder.cs" />
     <Compile Include="Models\WebProduct.cs" />
     <Compile Include="Models\WooCustomer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\Entities\ICategoryRepository.cs" />
-    <Compile Include="Repositories\Entities\IOrderRepository.cs" />
-    <Compile Include="Repositories\Entities\IProductRepository.cs" />
-    <Compile Include="Repositories\IWebRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
