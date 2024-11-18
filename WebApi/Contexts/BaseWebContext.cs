@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Security.Policy;
 using WebApi.Models;
 using WebApi.Contexts.Interfaces;
 
@@ -8,14 +9,16 @@ namespace WebApi.Contexts
     {
         # region Fields
 
+        protected readonly string Url;
         protected readonly Dictionary<string, string> Configs;
 
         #endregion
 
         #region Constructors
 
-        protected BaseWebContext(Dictionary<string, string> configs)
+        protected BaseWebContext(string url, Dictionary<string, string> configs)
         {
+            Url = url;
             Configs = configs;
         }
 
