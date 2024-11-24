@@ -125,6 +125,15 @@ namespace WebApi.Contexts
         }
 
         #endregion
+        
+        #region Customer
+        
+        public IEnumerable<WebCustomer> SearchCustomers(string searchTerm, int page = 1, int pageSize = 10, int maxPage = 1)
+        {
+            throw new System.NotImplementedException();
+        }
+        
+        #endregion
 
         #region Other Methods
 

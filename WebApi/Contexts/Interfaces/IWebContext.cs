@@ -36,6 +36,11 @@ namespace WebApi.Contexts.Interfaces
 
         #endregion
 
+        #region Customers
+
+        IEnumerable<WebCustomer> SearchCustomers(string searchTerm, int page = 1, int pageSize = 10, int maxPage = 1);
+
+        #endregion
         void Dispose();
     }
 }
