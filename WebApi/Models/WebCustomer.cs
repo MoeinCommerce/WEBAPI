@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace WebApi.Models
 {
-    public class WooCustomer
+    public class WebCustomer
     {
+        public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Address1 { get; set; }
@@ -17,6 +18,7 @@ namespace WebApi.Models
         public string Postcode { get; set; }
         public string Country { get; set; }
         public string Email { get; set; }
-        public string Phone { get; set; }
+        public List<string> PhoneNumbers { get; set; }
+        public DateTime? CreatedDate { get; set; }
     }
 }

@@ -78,12 +78,13 @@
     <Compile Include="Exceptions\DoesNotExistException.cs" />
     <Compile Include="Exceptions\ExceptionModel.cs" />
     <Compile Include="Exceptions\InvalidFieldException.cs" />
+    <Compile Include="Exceptions\NetworkError.cs" />
     <Compile Include="IWebInformation.cs" />
     <Compile Include="Models\WebCategory.cs" />
     <Compile Include="Models\WebConfig.cs" />
     <Compile Include="Models\WebOrder.cs" />
     <Compile Include="Models\WebProduct.cs" />
-    <Compile Include="Models\WooCustomer.cs" />
+    <Compile Include="Models\WebCustomer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

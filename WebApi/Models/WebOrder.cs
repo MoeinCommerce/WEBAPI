@@ -15,7 +15,7 @@ namespace WebApi.Models
         public string Currency { get; set; }
         public string Total { get; set; }
         public string TotalTax { get; set; }
-        public WooCustomer Billing { get; set; }
-        public WooCustomer Shipping { get; set; }
+        public WebCustomer Billing { get; set; }
+        public WebCustomer Shipping { get; set; }
     }
 }
