@@ -38,7 +38,11 @@ namespace WebApi.Contexts.Interfaces
 
         #region Customers
 
+        int CreateCustomer(WebCustomer entity);
         IEnumerable<WebCustomer> SearchCustomers(string searchTerm, int page = 1, int pageSize = 10, int maxPage = 1);
+        IEnumerable<WebCustomer> GetAllCustomersWithFields(IList<string> fields);
+        WebCustomer GetCustomerById(int id);
+        
 
         #endregion
         void Dispose();
