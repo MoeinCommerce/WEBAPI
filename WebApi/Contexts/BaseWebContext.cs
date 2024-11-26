@@ -119,6 +119,11 @@ namespace WebApi.Contexts
             throw new System.NotImplementedException();
         }
 
+        public int CreateCustomer(WebCustomer entity)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public int GetTotalCategoriesCount(string searchTerm)
         {
             throw new System.NotImplementedException();
