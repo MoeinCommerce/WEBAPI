@@ -128,6 +128,15 @@ namespace WebApi.Contexts
         {
             throw new System.NotImplementedException();
         }
+        public IEnumerable<WebCustomer> GetAllCustomersWithFields(IList<string> fields)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public WebCustomer GetCustomerById(int id)
+        {
+            throw new System.NotImplementedException();
+        }
 
         #endregion
         
