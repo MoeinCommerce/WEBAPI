@@ -45,6 +45,12 @@ namespace WebApi.Contexts.Interfaces
         
 
         #endregion
+
+        #region PaymentMethods
+
+        IEnumerable<WebPaymentMethod> GetAllPaymentMethods();
+
+        #endregion
         void Dispose();
     }
 }
