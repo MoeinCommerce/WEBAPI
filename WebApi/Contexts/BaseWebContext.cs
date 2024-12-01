@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Security.Policy;
 using WebApi.Models;
@@ -138,6 +139,27 @@ namespace WebApi.Contexts
             throw new System.NotImplementedException();
         }
 
+        public IEnumerable<WebOrder> GetAllOrdersExcludeById(IEnumerable<int> idsToExclude, DateTime? startDate, DateTime? endDate)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<WebOrder> GetOrdersBySearch(
+            IEnumerable<int> idsToExclude,
+            string searchTerm, 
+            string status,
+            int? customerId, 
+            decimal totalMin, 
+            decimal totalMax,
+            DateTime startDate, 
+            DateTime endDate, 
+            int page = 1,
+            int pageSize = 10, 
+            int maxPage = 1)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
         
         #region Customer
@@ -146,9 +168,25 @@ namespace WebApi.Contexts
         {
             throw new System.NotImplementedException();
         }
-        
+        public IEnumerable<KeyValuePair<int, string>> GetCustomerIdAndNameBySearch(
+            string searchTerm,
+            int page = 1,
+            int pageSize = 10,
+            int maxPage = 1)
+        {
+            throw new System.NotImplementedException();
+        }
         #endregion
 
+        #region PaymentMethods
+
+        public IEnumerable<WebPaymentMethod> GetAllPaymentMethods()
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+        
         #region Other Methods
 
         public void Dispose()

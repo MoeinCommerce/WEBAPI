@@ -42,8 +42,29 @@ namespace WebApi.Contexts.Interfaces
         IEnumerable<WebCustomer> SearchCustomers(string searchTerm, int page = 1, int pageSize = 10, int maxPage = 1);
         IEnumerable<WebCustomer> GetAllCustomersWithFields(IList<string> fields);
         WebCustomer GetCustomerById(int id);
+
+        IEnumerable<KeyValuePair<int, string>> GetCustomerIdAndNameBySearch(string searchTerm, int page = 1, int pageSize = 10,
+            int maxPage = 1);
         
 
+        #endregion
+        
+        # region Orders
+        
+        IEnumerable<WebOrder> GetAllOrdersExcludeById(IEnumerable<int> idsToExclude, DateTime? startDate, DateTime? endDate);
+        IEnumerable<WebOrder> GetOrdersBySearch(
+            IEnumerable<int> idsToExclude,
+            string searchTerm,
+            string status,
+            int? customerId,
+            decimal totalMin,
+            decimal totalMax,
+            DateTime startDate,
+            DateTime endDate,
+            int page = 1,
+            int pageSize = 10,
+            int maxPage = 1);
+        
         #endregion
 
         #region PaymentMethods
