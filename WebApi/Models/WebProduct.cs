@@ -13,7 +13,7 @@ namespace WebApi.Models
         public string Slug { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }
-        public string Status { get; set; }
+        // public string Status { get; set; }
         public string Description { get; set; }
         public string Sku { get; set; }
         public decimal? BuyPrice { get; set; }
