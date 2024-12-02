@@ -8,9 +8,16 @@ namespace WebApi.Models
         public int VariationId { get; set; }
         public int Quantity { get; set; }
         public string TaxClass { get; set; }
-        public string Subtotal { get; set; }
-        public string SubtotalTax { get; set; }
-        public string Total { get; set; }
-        public string TotalTax { get; set; }
+        public double Subtotal { get; set; }
+        public double SubtotalTax { get; set; }
+        public double TotalTax { get; set; }
+        public double UnitPrice { get; set; }
+        public double UnitDiscount { get; set; }
+        public double UnitTax { get; set; }
+        // Computational Properties
+        public double SubTotal => Quantity * UnitPrice;
+        public double Discount => Quantity * UnitDiscount;
+        public double Tax => Quantity * UnitTax;
+        public double Total => SubTotal - Discount + Tax;
     }
 }
