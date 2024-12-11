@@ -7,10 +7,6 @@ namespace WebApi.Models
         public int ProductId { get; set; }
         public int VariationId { get; set; }
         public int Quantity { get; set; }
-        public string TaxClass { get; set; }
-        public double Subtotal { get; set; }
-        public double SubtotalTax { get; set; }
-        public double TotalTax { get; set; }
         public double UnitPrice { get; set; }
         public double UnitDiscount { get; set; }
         public double UnitTax { get; set; }
