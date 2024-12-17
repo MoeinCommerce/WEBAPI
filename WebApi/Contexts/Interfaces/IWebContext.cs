@@ -14,8 +14,8 @@ namespace WebApi.Contexts.Interfaces
         WebProduct GetProductById(int id);
         IEnumerable<WebProduct> GetAllProducts();
         IEnumerable<WebProduct> GetAllProductsExcludingIds(IList<int> idsToExclude);
-        int CreateProduct(WebProduct entity);
-        int UpdateProduct(int id, WebProduct entity);
+        int CreateProduct(WebProduct entity, List<ExcludedFields> excludedFields = null);
+        int UpdateProduct(int id, WebProduct entity, List<ExcludedFields> excludedFields = null);
         int GetTotalProductsCount(string searchTerm);
         IEnumerable<WebProduct> GetAllProductsWithFields(IList<string> fields);
         IEnumerable<WebProduct> SearchProducts(string searchTerm, int page = 1, int pageSize = 10, int maxPage = 1);
@@ -28,8 +28,8 @@ namespace WebApi.Contexts.Interfaces
         WebCategory GetCategoryById(int id);
         IEnumerable<WebCategory> GetAllCategories();
         IEnumerable<WebCategory> GetAllCategoriesExcludingIds(IList<int> idsToExclude);
-        int CreateCategory(WebCategory entity);
-        int UpdateCategory(int id, WebCategory entity);
+        int CreateCategory(WebCategory entity, List<ExcludedFields> excludedFields = null);
+        int UpdateCategory(int id, WebCategory entity, List<ExcludedFields> excludedFields = null);
         IList<WebCategory> GetAllCategoriesWithFields(IList<string> fields);
         int GetMaxCategoryId();
         IList<WebCategory> SearchCategories(string searchTerm, int page = 1, int pageSize = 10, int maxPage = 1);

@@ -47,12 +47,12 @@ namespace WebApi.Contexts
             throw new System.NotImplementedException();
         }
 
-        public int CreateProduct(WebProduct entity)
+        public int CreateProduct(WebProduct entity, List<ExcludedFields> excludedFields = null)
         {
             throw new System.NotImplementedException();
         }
 
-        public int UpdateProduct(int id, WebProduct entity)
+        public int UpdateProduct(int id, WebProduct entity, List<ExcludedFields> excludedFields = null)
         {
             throw new System.NotImplementedException();
         }
@@ -95,12 +95,12 @@ namespace WebApi.Contexts
             throw new System.NotImplementedException();
         }
 
-        public int CreateCategory(WebCategory entity)
+        public int CreateCategory(WebCategory entity, List<ExcludedFields> excludedFields = null)
         {
             throw new System.NotImplementedException();
         }
 
-        public int UpdateCategory(int id, WebCategory entity)
+        public int UpdateCategory(int id, WebCategory entity, List<ExcludedFields> excludedFields = null)
         {
             throw new System.NotImplementedException();
         }
