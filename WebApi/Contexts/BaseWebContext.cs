@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Security.Policy;
 using WebApi.Models;
 using WebApi.Contexts.Interfaces;
+using RestSharp;
 
 namespace WebApi.Contexts
 {
@@ -57,7 +58,7 @@ namespace WebApi.Contexts
             throw new System.NotImplementedException();
         }
 
-        public IEnumerable<WebProduct> GetAllProductsWithFields(IList<string> fields)
+        public IEnumerable<WebProduct> GetAllProductsWithFields()
         {
             return new List<WebProduct>();
         }
@@ -76,6 +77,19 @@ namespace WebApi.Contexts
             throw new System.NotImplementedException();
         }
 
+        public IEnumerable<WebProduct> GetVariableProductsBySearch(string searchTerm)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<WebProduct> GetVariationProductsByVariableId(int variableId)
+        {
+            throw new NotImplementedException();
+        }
+        public void UpdateVariationProduct(int variableId, WebProduct variationProduct, List<ExcludedFields> excludedFields = null)
+        {
+            throw new NotImplementedException();
+        }
         #endregion
 
         #region Category
@@ -193,7 +207,6 @@ namespace WebApi.Contexts
         {
             throw new System.NotImplementedException();
         }
-
         #endregion
     }
 }

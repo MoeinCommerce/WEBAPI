@@ -22,5 +22,6 @@ namespace WebApi.Models
         public int StockQuantity { get; set; }
         public List<WebCategory> Categories { get; set; }
         public string IconPath { set; get; }
+        public string Type { get; set; }
     }
 }

@@ -117,6 +117,7 @@
     <Compile Include="Exceptions\NetworkError.cs" />
     <Compile Include="IWebInformation.cs" />
     <Compile Include="Models\ExcludedFields.cs" />
+    <Compile Include="Models\ProductImportProperties.cs" />
     <Compile Include="Models\WebCategory.cs" />
     <Compile Include="Models\WebConfig.cs" />
     <Compile Include="Models\WebOrder.cs" />

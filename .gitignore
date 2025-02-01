@@ -366,3 +366,4 @@ MigrationBackup/
 FodyWeavers.xsd
 
 .idea/
+WebApi/.vscode/settings.json

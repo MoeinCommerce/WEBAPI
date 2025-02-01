@@ -17,10 +17,17 @@ namespace WebApi.Contexts.Interfaces
         int CreateProduct(WebProduct entity, List<ExcludedFields> excludedFields = null);
         int UpdateProduct(int id, WebProduct entity, List<ExcludedFields> excludedFields = null);
         int GetTotalProductsCount(string searchTerm);
-        IEnumerable<WebProduct> GetAllProductsWithFields(IList<string> fields);
+        IEnumerable<WebProduct> GetAllProductsWithFields();
         IEnumerable<WebProduct> SearchProducts(string searchTerm, int page = 1, int pageSize = 10, int maxPage = 1);
         int GetMaxProductId();
         int GetTotalCategoriesCount(string searchTerm);
+
+        #endregion
+
+        #region  VariableProduct
+        IEnumerable<WebProduct> GetVariableProductsBySearch(string searchTerm);
+        IEnumerable<WebProduct> GetVariationProductsByVariableId(int variableId);
+        void UpdateVariationProduct(int variableId, WebProduct variationProduct, List<ExcludedFields> excludedFields = null);
 
         #endregion
 
