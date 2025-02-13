@@ -17,8 +17,8 @@ namespace WebApi.Contexts.Interfaces
         int CreateProduct(WebProduct entity, List<ExcludedFields> excludedFields = null);
         int UpdateProduct(int id, WebProduct entity, List<ExcludedFields> excludedFields = null);
         int GetTotalProductsCount(string searchTerm);
-        IEnumerable<WebProduct> GetAllProductsWithFields();
-        IEnumerable<WebProduct> SearchProducts(string searchTerm, int page = 1, int pageSize = 10, int maxPage = 1);
+        IEnumerable<WebProduct> GetAllProductsWithFields(ProductTypes productType);
+        IEnumerable<WebProduct> SearchProducts(string searchTerm, ProductTypes productType, int page = 1, int pageSize = 10, int maxPage = 1);
         int GetMaxProductId();
         int GetTotalCategoriesCount(string searchTerm);
 

@@ -18,5 +18,10 @@ namespace WebApi.Models
         // Items for Categories
         CategoryName       // Excludes the category name
     }
-
+    public enum ProductTypes
+    {
+        Simple,
+        Variable,
+        Variation
+    }
 }

@@ -58,12 +58,12 @@ namespace WebApi.Contexts
             throw new System.NotImplementedException();
         }
 
-        public IEnumerable<WebProduct> GetAllProductsWithFields()
+        public IEnumerable<WebProduct> GetAllProductsWithFields(ProductTypes productType)
         {
             return new List<WebProduct>();
         }
 
-        public IEnumerable<WebProduct> SearchProducts(string searchTerm, int page = 1, int pageSize = 10, int maxPage = 1)
+        public IEnumerable<WebProduct> SearchProducts(string searchTerm, ProductTypes productType, int page = 1, int pageSize = 10, int maxPage = 1)
         {
             return new List<WebProduct>();
         }
