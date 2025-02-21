@@ -9,6 +9,7 @@ namespace WebApi.Contexts.Interfaces
 {
     public interface IWebContext
     {
+        bool ValidateConnection();
         #region Product
 
         WebProduct GetProductById(int id);

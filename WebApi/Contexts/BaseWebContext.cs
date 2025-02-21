@@ -207,6 +207,11 @@ namespace WebApi.Contexts
         {
             throw new System.NotImplementedException();
         }
+
+        public bool ValidateConnection()
+        {
+            throw new NotImplementedException();
+        }
         #endregion
     }
 }
