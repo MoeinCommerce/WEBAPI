@@ -212,6 +212,11 @@ namespace WebApi.Contexts
         {
             throw new NotImplementedException();
         }
+
+        public void UpdateOrderStatus(int orderId, OrderStatus status)
+        {
+            throw new NotImplementedException();
+        }
         #endregion
     }
 }
