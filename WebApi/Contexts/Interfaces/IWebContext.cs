@@ -72,7 +72,7 @@ namespace WebApi.Contexts.Interfaces
             int page = 1,
             int pageSize = 10,
             int maxPage = 1);
-        
+        void UpdateOrderStatus(int orderId, OrderStatus status);
         #endregion
 
         #region PaymentMethods

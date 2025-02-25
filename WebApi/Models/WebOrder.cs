@@ -12,7 +12,7 @@ namespace WebApi.Models
         public int CustomerId { get; set; }
         public int PaymentMethodId { get; set; }
         public string TransactionId { get; set; }
-        public string Status { get; set; }
+        public OrderStatus Status { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }
         public string Currency { get; set; }
@@ -69,5 +69,15 @@ namespace WebApi.Models
         }
 
         public double Total => SubTotal - Discount + Tax + ShippingTotal;
+    }
+    public enum OrderStatus
+    {
+        Pending = 0,
+        OnHold = 1,
+        Failed = 2,
+        Processing = 3,
+        Cancelled = 4,
+        Completed = 5,
+        Refunded = 6
     }
 }
