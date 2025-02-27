@@ -78,6 +78,7 @@ namespace WebApi.Models
         Processing = 3,
         Cancelled = 4,
         Completed = 5,
-        Refunded = 6
+        Refunded = 6,
+        Other = 7
     }
 }
