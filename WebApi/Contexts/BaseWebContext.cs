@@ -160,8 +160,8 @@ namespace WebApi.Contexts
 
         public IEnumerable<WebOrder> GetOrdersBySearch(
             IEnumerable<int> idsToExclude,
-            string searchTerm, 
-            string status,
+            string searchTerm,
+            OrderStatus status,
             int? customerId, 
             decimal totalMin, 
             decimal totalMax,
