@@ -10,7 +10,7 @@ namespace WebApi.Models
     {
         public int Id { get; set; }
         public int CustomerId { get; set; }
-        public int PaymentMethodId { get; set; }
+        public WebPaymentMethod PaymentMethod { get; set; }
         public string TransactionId { get; set; }
         public OrderStatus Status { get; set; }
         public DateTime DateCreated { get; set; }
