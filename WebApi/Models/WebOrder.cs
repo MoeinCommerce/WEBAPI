@@ -22,6 +22,7 @@ namespace WebApi.Models
         public double UnitPrice { get; set; }
         public WebCustomer Billing { get; set; }
         public WebCustomer Shipping { get; set; }
+        public WebShippingDetail ShippingDetail { get; set; }
         public List<WebOrderDetail> OrderItems { get; set; }
         // Computational Properties
         public double SubTotal 
