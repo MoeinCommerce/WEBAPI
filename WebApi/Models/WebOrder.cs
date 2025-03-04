@@ -8,9 +8,30 @@ namespace WebApi.Models
 {
     public class WebOrder
     {
+        private static string _baseUrl = "https://default.url"; // Default placeholder
+
         public int Id { get; set; }
         public int CustomerId { get; set; }
         public WebPaymentMethod PaymentMethod { get; set; }
+
+        // Main app should set this base URL at runtime
+        public static string BaseUrl
+        {
+            get => _baseUrl;
+            set
+            {
+                if (!string.IsNullOrWhiteSpace(value))
+                {
+                    _baseUrl = value.TrimEnd('/'); // Ensure no trailing slash for consistency
+                }
+            }
+        }
+        // Developers set only the relative order path, e.g., "orders/123"
+        public string OrderPath { get; set; }
+
+        // Computed property combining base URL and order path
+        public string Link => $"{BaseUrl}/{OrderPath}";
+
         public string TransactionId { get; set; }
         public OrderStatus Status { get; set; }
         public DateTime DateCreated { get; set; }
