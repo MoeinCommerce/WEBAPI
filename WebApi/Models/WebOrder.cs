@@ -12,6 +12,7 @@ namespace WebApi.Models
 
         public int Id { get; set; }
         public int CustomerId { get; set; }
+        public string CustomerNote { get; set; }
         public WebPaymentMethod PaymentMethod { get; set; }
 
         // Main app should set this base URL at runtime
