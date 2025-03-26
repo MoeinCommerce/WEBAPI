@@ -12,6 +12,7 @@ namespace WebApi.Models
         // Ignored Product Items
         ProductPrice,      // Excludes the product price,
         ProductDiscount,   // Excludes the product discount
+        ProductDescription,
         Sku,               // Excludes the SKU (stock-keeping unit)
         Stock,             // Excludes the stock information
         CategoryOfProduct, // Excludes the product's category
