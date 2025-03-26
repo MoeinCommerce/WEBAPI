@@ -15,6 +15,7 @@ namespace WebApi.Models
         Sku,               // Excludes the SKU (stock-keeping unit)
         Stock,             // Excludes the stock information
         CategoryOfProduct, // Excludes the product's category
+        ProductAttributes, // Excludes the product's attributes
 
         // Items for Categories
         CategoryName       // Excludes the category name
