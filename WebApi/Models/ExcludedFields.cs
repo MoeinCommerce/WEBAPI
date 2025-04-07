@@ -17,7 +17,8 @@ namespace WebApi.Models
         CategoryOfProduct, // Excludes the product's category
 
         // Items for Categories
-        CategoryName       // Excludes the category name
+        CategoryName,       // Excludes the category name
+        DraftStatus
     }
     public enum ProductTypes
     {
