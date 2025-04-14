@@ -35,6 +35,7 @@ namespace WebApi.Models
 
         public string TransactionId { get; set; }
         public OrderStatus Status { get; set; }
+        public string StatusText { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }
         public string Currency { get; set; }
