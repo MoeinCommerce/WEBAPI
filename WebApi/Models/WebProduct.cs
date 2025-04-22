@@ -18,7 +18,7 @@ namespace WebApi.Models
         public decimal? BuyPrice { get; set; }
         public decimal RegularPrice { get; set; }
         public decimal? SalePrice { get; set; }
-        public int StockQuantity { get; set; }
+        public double StockQuantity { get; set; }
         public List<WebCategory> Categories { get; set; }
         public string IconPath { set; get; }
         public string Type { get; set; }
