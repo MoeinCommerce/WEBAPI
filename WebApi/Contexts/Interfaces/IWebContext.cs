@@ -60,6 +60,7 @@ namespace WebApi.Contexts.Interfaces
         # region Orders
         
         IEnumerable<WebOrder> GetAllOrdersExcludeById(IEnumerable<int> idsToExclude, DateTime? startDate, DateTime? endDate);
+        IEnumerable<WebOrder> GetOrdersByFilters(DateTime? startDate, DateTime? endDate, IEnumerable<int> idsToExclude = null, IEnumerable<OrderStatus> orderStatuses = null);
         IEnumerable<WebOrder> GetOrdersBySearch(
             IEnumerable<int> idsToExclude,
             string searchTerm,
