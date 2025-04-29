@@ -157,6 +157,10 @@ namespace WebApi.Contexts
         {
             throw new NotImplementedException();
         }
+        public IEnumerable<WebOrder> GetOrdersByFilters(DateTime? startDate, DateTime? endDate, IEnumerable<int> idsToExclude = null, IEnumerable<OrderStatus> orderStatuses = null)
+        {
+            throw new NotImplementedException();
+        }
 
         public IEnumerable<WebOrder> GetOrdersBySearch(
             IEnumerable<int> idsToExclude,
