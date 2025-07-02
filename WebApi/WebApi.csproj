@@ -116,6 +116,7 @@
     <Compile Include="Contexts\Interfaces\IWebContext.cs" />
     <Compile Include="Exceptions\DoesNotExistException.cs" />
     <Compile Include="Exceptions\ExceptionModel.cs" />
+    <Compile Include="Exceptions\InternalServerErrorException.cs" />
     <Compile Include="Exceptions\InvalidFieldException.cs" />
     <Compile Include="Exceptions\NetworkError.cs" />
     <Compile Include="IWebInformation.cs" />
