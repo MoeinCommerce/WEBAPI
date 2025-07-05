@@ -114,6 +114,7 @@
   <ItemGroup>
     <Compile Include="Contexts\BaseWebContext.cs" />
     <Compile Include="Contexts\Interfaces\IWebContext.cs" />
+    <Compile Include="Exceptions\AuthenticationException.cs" />
     <Compile Include="Exceptions\DoesNotExistException.cs" />
     <Compile Include="Exceptions\ExceptionModel.cs" />
     <Compile Include="Exceptions\InternalServerErrorException.cs" />
