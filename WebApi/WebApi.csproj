@@ -114,12 +114,12 @@
   <ItemGroup>
     <Compile Include="Contexts\BaseWebContext.cs" />
     <Compile Include="Contexts\Interfaces\IWebContext.cs" />
-    <Compile Include="Exceptions\AuthenticationException.cs" />
-    <Compile Include="Exceptions\DoesNotExistException.cs" />
-    <Compile Include="Exceptions\ExceptionFields.cs" />
-    <Compile Include="Exceptions\ExceptionModel.cs" />
+    <Compile Include="Exceptions\WebAuthenticationException.cs" />
+    <Compile Include="Exceptions\WebDoesNotExistException.cs" />
+    <Compile Include="Exceptions\WebExceptionFields.cs" />
+    <Compile Include="Exceptions\WebExceptionModel.cs" />
     <Compile Include="Exceptions\InternalServerErrorException.cs" />
-    <Compile Include="Exceptions\InvalidFieldException.cs" />
+    <Compile Include="Exceptions\WebInvalidFieldException.cs" />
     <Compile Include="Exceptions\NetworkError.cs" />
     <Compile Include="IWebInformation.cs" />
     <Compile Include="Models\ExcludedFields.cs" />
