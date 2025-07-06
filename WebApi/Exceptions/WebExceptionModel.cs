@@ -2,7 +2,7 @@ using System;
 
 namespace WebApi.Exceptions
 {
-    public class ExceptionModel : Exception
+    public class WebExceptionModel : Exception
     {
         /// <summary>
         /// The name of the field associated with the exception.

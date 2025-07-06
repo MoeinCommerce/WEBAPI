@@ -2,7 +2,7 @@ using System;
 
 namespace WebApi.Exceptions
 {
-    public class DoesNotExistException : Exception
+    public class WebDoesNotExistException : Exception
     {
     }
 }

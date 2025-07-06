@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebApi.Exceptions
 {
-    public class AuthenticationException : Exception
+    public class WebAuthenticationException : Exception
     {
     }
 }

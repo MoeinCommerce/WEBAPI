@@ -1,6 +1,6 @@
 namespace WebApi.Exceptions
 {
-    public static class ExceptionFields
+    public static class WebExceptionFields
     {
         public const string DuplicateCategoryName = "DuplicateCategoryName";
         public const string InvalidCategoryId = "InvalidCategoryId";
