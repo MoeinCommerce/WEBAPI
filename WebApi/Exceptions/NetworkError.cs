@@ -1,6 +1,6 @@
 namespace WebApi.Exceptions
 {
-    public class NetworkError : ExceptionModel
+    public class NetworkError : WebExceptionModel
     {
         
     }
