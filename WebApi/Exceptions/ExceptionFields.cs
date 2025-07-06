@@ -6,6 +6,7 @@ namespace WebApi.Exceptions
         public const string InvalidCategoryId = "InvalidCategoryId";
         public const string InvalidCategoryName = "InvalidCategoryName";
         public const string MissingParentCategoryId = "MissingParentCategoryId";
+        public const string InvalidProductId = "InvalidProductId";
         public const string InvalidProductCode = "InvalidProductCode";
         public const string InvalidProductNameLength = "InvalidProductNameLength";
         public const string InvalidProductDescriptionLength = "InvalidProductDescriptionLength";
