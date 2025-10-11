@@ -23,6 +23,7 @@ namespace WebApi.Models
         public string IconPath { set; get; }
         public string Type { get; set; }
         public List<Attribute> Attributes { get; set; }
+        public List<Price> Prices { get; set; }
 
     }
     public class Attribute
