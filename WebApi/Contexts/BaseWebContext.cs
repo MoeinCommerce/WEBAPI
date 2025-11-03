@@ -90,6 +90,14 @@ namespace WebApi.Contexts
         {
             throw new NotImplementedException();
         }
+        public int CreateVariableProduct(WebProduct variableProduct, List<ExcludedFields> excludedFields = null)
+        {
+            throw new NotImplementedException();
+        }
+        public int CreateVariationProduct(int variableId, WebProduct variationProduct, List<ExcludedFields> excludedFields = null)
+        {
+            throw new NotImplementedException();
+        }
         #endregion
 
         #region Category

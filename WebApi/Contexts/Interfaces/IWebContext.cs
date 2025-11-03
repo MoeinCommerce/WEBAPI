@@ -26,6 +26,8 @@ namespace WebApi.Contexts.Interfaces
         #endregion
 
         #region  VariableProduct
+        int CreateVariableProduct(WebProduct variableProduct, List<ExcludedFields> excludedFields = null);
+        int CreateVariationProduct(int variableId, WebProduct variationProduct, List<ExcludedFields> excludedFields = null);
         IEnumerable<WebProduct> GetVariableProductsBySearch(string searchTerm);
         IEnumerable<WebProduct> GetVariationProductsByVariableId(int variableId);
         void UpdateVariationProduct(int variableId, WebProduct variationProduct, List<ExcludedFields> excludedFields = null);
