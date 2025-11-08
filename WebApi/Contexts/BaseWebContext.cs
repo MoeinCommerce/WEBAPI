@@ -1,9 +1,10 @@
+using RestSharp;
 using System;
 using System.Collections.Generic;
+using System.Numerics;
 using System.Security.Policy;
-using WebApi.Models;
 using WebApi.Contexts.Interfaces;
-using RestSharp;
+using WebApi.Models;
 
 namespace WebApi.Contexts
 {
@@ -28,7 +29,7 @@ namespace WebApi.Contexts
 
         #region Product
 
-        public WebProduct GetProductById(int id)
+        public WebProduct GetProductById(BigInteger id)
         {
             throw new System.NotImplementedException();
         }
@@ -43,17 +44,17 @@ namespace WebApi.Contexts
             throw new System.NotImplementedException();
         }
 
-        public IEnumerable<WebProduct> GetAllProductsExcludingIds(IList<int> idsToExclude)
+        public IEnumerable<WebProduct> GetAllProductsExcludingIds(IList<BigInteger> idsToExclude)
         {
             throw new System.NotImplementedException();
         }
 
-        public int CreateProduct(WebProduct entity, List<ExcludedFields> excludedFields = null)
+        public BigInteger CreateProduct(WebProduct entity, List<ExcludedFields> excludedFields = null)
         {
             throw new System.NotImplementedException();
         }
 
-        public int UpdateProduct(int id, WebProduct entity, List<ExcludedFields> excludedFields = null)
+        public BigInteger UpdateProduct(BigInteger id, WebProduct entity, List<ExcludedFields> excludedFields = null)
         {
             throw new System.NotImplementedException();
         }
@@ -68,11 +69,11 @@ namespace WebApi.Contexts
             return new List<WebProduct>();
         }
 
-        public int GetMaxProductId()
+        public BigInteger GetMaxProductId()
         {
             throw new System.NotImplementedException();
         }
-        public int GetTotalProductsCount(string searchTerm)
+        public BigInteger GetTotalProductsCount(string searchTerm)
         {
             throw new System.NotImplementedException();
         }
@@ -82,19 +83,19 @@ namespace WebApi.Contexts
             throw new NotImplementedException();
         }
 
-        public IEnumerable<WebProduct> GetVariationProductsByVariableId(int variableId)
+        public IEnumerable<WebProduct> GetVariationProductsByVariableId(BigInteger variableId)
         {
             throw new NotImplementedException();
         }
-        public void UpdateVariationProduct(int variableId, WebProduct variationProduct, List<ExcludedFields> excludedFields = null)
+        public void UpdateVariationProduct(BigInteger variableId, WebProduct variationProduct, List<ExcludedFields> excludedFields = null)
         {
             throw new NotImplementedException();
         }
-        public int CreateVariableProduct(WebProduct variableProduct, List<ExcludedFields> excludedFields = null)
+        public BigInteger CreateVariableProduct(WebProduct variableProduct, List<ExcludedFields> excludedFields = null)
         {
             throw new NotImplementedException();
         }
-        public int CreateVariationProduct(int variableId, WebProduct variationProduct, List<ExcludedFields> excludedFields = null)
+        public BigInteger CreateVariationProduct(BigInteger variableId, WebProduct variationProduct, List<ExcludedFields> excludedFields = null)
         {
             throw new NotImplementedException();
         }
@@ -102,7 +103,7 @@ namespace WebApi.Contexts
 
         #region Category
 
-        public WebCategory GetCategoryById(int id)
+        public WebCategory GetCategoryById(BigInteger id)
         {
             throw new System.NotImplementedException();
         }
@@ -112,17 +113,17 @@ namespace WebApi.Contexts
             throw new System.NotImplementedException();
         }
 
-        public IEnumerable<WebCategory> GetAllCategoriesExcludingIds(IList<int> idsToExclude)
+        public IEnumerable<WebCategory> GetAllCategoriesExcludingIds(IList<BigInteger> idsToExclude)
         {
             throw new System.NotImplementedException();
         }
 
-        public int CreateCategory(WebCategory entity, List<ExcludedFields> excludedFields = null)
+        public BigInteger CreateCategory(WebCategory entity, List<ExcludedFields> excludedFields = null)
         {
             throw new System.NotImplementedException();
         }
 
-        public int UpdateCategory(int id, WebCategory entity, List<ExcludedFields> excludedFields = null)
+        public BigInteger UpdateCategory(BigInteger id, WebCategory entity, List<ExcludedFields> excludedFields = null)
         {
             throw new System.NotImplementedException();
         }
@@ -132,7 +133,7 @@ namespace WebApi.Contexts
             throw new System.NotImplementedException();
         }
 
-        public int GetMaxCategoryId()
+        public BigInteger GetMaxCategoryId()
         {
             throw new System.NotImplementedException();
         }
@@ -142,12 +143,12 @@ namespace WebApi.Contexts
             throw new System.NotImplementedException();
         }
 
-        public int CreateCustomer(WebCustomer entity)
+        public BigInteger CreateCustomer(WebCustomer entity)
         {
             throw new System.NotImplementedException();
         }
 
-        public int GetTotalCategoriesCount(string searchTerm)
+        public BigInteger GetTotalCategoriesCount(string searchTerm)
         {
             throw new System.NotImplementedException();
         }
@@ -156,25 +157,25 @@ namespace WebApi.Contexts
             throw new System.NotImplementedException();
         }
 
-        public WebCustomer GetCustomerById(int id)
+        public WebCustomer GetCustomerById(BigInteger id)
         {
             throw new System.NotImplementedException();
         }
 
-        public IEnumerable<WebOrder> GetAllOrdersExcludeById(IEnumerable<int> idsToExclude, DateTime? startDate, DateTime? endDate)
+        public IEnumerable<WebOrder> GetAllOrdersExcludeById(IEnumerable<BigInteger> idsToExclude, DateTime? startDate, DateTime? endDate)
         {
             throw new NotImplementedException();
         }
-        public IEnumerable<WebOrder> GetOrdersByFilters(DateTime? startDate, DateTime? endDate, IEnumerable<int> idsToExclude = null, IEnumerable<OrderStatus> orderStatuses = null)
+        public IEnumerable<WebOrder> GetOrdersByFilters(DateTime? startDate, DateTime? endDate, IEnumerable<BigInteger> idsToExclude = null, IEnumerable<OrderStatus> orderStatuses = null)
         {
             throw new NotImplementedException();
         }
 
         public IEnumerable<WebOrder> GetOrdersBySearch(
-            IEnumerable<int> idsToExclude,
+            IEnumerable<BigInteger> idsToExclude,
             string searchTerm,
             IEnumerable<OrderStatus> statuses,
-            int? customerId, 
+            BigInteger? customerId, 
             decimal totalMin, 
             decimal totalMax,
             DateTime startDate, 
@@ -194,7 +195,7 @@ namespace WebApi.Contexts
         {
             throw new System.NotImplementedException();
         }
-        public IEnumerable<KeyValuePair<int, string>> GetCustomerIdAndNameBySearch(
+        public IEnumerable<KeyValuePair<BigInteger, string>> GetCustomerIdAndNameBySearch(
             string searchTerm,
             int page = 1,
             int pageSize = 10,
@@ -225,7 +226,7 @@ namespace WebApi.Contexts
             throw new NotImplementedException();
         }
 
-        public void UpdateOrderStatus(int orderId, OrderStatus status)
+        public void UpdateOrderStatus(BigInteger orderId, OrderStatus status)
         {
             throw new NotImplementedException();
         }

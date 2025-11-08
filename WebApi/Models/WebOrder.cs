@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,8 +11,8 @@ namespace WebApi.Models
     {
         private static string _baseUrl = "https://default.url"; // Default placeholder
 
-        public int Id { get; set; }
-        public int CustomerId { get; set; }
+        public BigInteger Id { get; set; }
+        public BigInteger CustomerId { get; set; }
         public string CustomerNote { get; set; }
         public WebPaymentMethod PaymentMethod { get; set; }
 
