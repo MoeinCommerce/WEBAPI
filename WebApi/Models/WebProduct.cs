@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,7 +9,7 @@ namespace WebApi.Models
 {
     public class WebProduct
     {
-        public int Id { get; set; }
+        public BigInteger Id { get; set; }
         public string Name { get; set; }
         public string Slug { get; set; }
         public DateTime DateCreated { get; set; }
@@ -28,7 +29,7 @@ namespace WebApi.Models
     }
     public class Attribute
     {
-        public int Id { get; set; }
+        public BigInteger Id { get; set; }
         public string Name { get; set; }
         public string Value { get; set; }
     }

@@ -1,11 +1,13 @@
+using System.Numerics;
+
 namespace WebApi.Models
 {
     public class WebOrderDetail
     {
-        public int Id { get; set; }
+        public BigInteger Id { get; set; }
         public string Name { get; set; }
-        public int ProductId { get; set; }
-        public int VariationId { get; set; }
+        public BigInteger ProductId { get; set; }
+        public BigInteger VariationId { get; set; }
         public double Quantity { get; set; }
         public double UnitPrice { get; set; }
         public double UnitDiscount { get; set; }
