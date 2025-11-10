@@ -11,8 +11,8 @@ namespace WebApi.Models
     {
         private static string _baseUrl = "https://default.url"; // Default placeholder
 
-        public BigInteger Id { get; set; }
-        public BigInteger CustomerId { get; set; }
+        public long Id { get; set; }
+        public long CustomerId { get; set; }
         public string CustomerNote { get; set; }
         public WebPaymentMethod PaymentMethod { get; set; }
 

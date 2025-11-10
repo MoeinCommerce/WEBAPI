@@ -10,8 +10,8 @@ namespace WebApi.Models
 {
     public class WebShippingDetail
     {
-        public BigInteger Id { get; set; }
-        public BigInteger VehicleId { get; set; }
+        public long Id { get; set; }
+        public long VehicleId { get; set; }
         public string VehicleName { get; set; }
         public double VehiclePrice { get; set; }
         public string VehicleDescription { get; set;}

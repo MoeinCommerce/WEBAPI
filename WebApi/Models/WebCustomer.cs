@@ -9,7 +9,7 @@ namespace WebApi.Models
 {
     public class WebCustomer
     {
-        public BigInteger Id { get; set; }
+        public long Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Address1 { get; set; }
