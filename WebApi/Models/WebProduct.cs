@@ -25,6 +25,7 @@ namespace WebApi.Models
         public string Type { get; set; }
         public List<Attribute> Attributes { get; set; }
         public List<Price> Prices { get; set; }
+        public List<WebProduct> Variations { get; set; }
 
     }
     public class Attribute
