@@ -4,10 +4,10 @@ namespace WebApi.Models
 {
     public class WebOrderDetail
     {
-        public long Id { get; set; }
+        public string Id { get; set; }
         public string Name { get; set; }
-        public long ProductId { get; set; }
-        public long VariationId { get; set; }
+        public string ProductId { get; set; }
+        public string VariationId { get; set; }
         public double Quantity { get; set; }
         public double UnitPrice { get; set; }
         public double UnitDiscount { get; set; }

@@ -29,7 +29,7 @@ namespace WebApi.Contexts
 
         #region Product
 
-        public WebProduct GetProductById(long id)
+        public WebProduct GetProductById(string id)
         {
             throw new System.NotImplementedException();
         }
@@ -44,17 +44,17 @@ namespace WebApi.Contexts
             throw new System.NotImplementedException();
         }
 
-        public IEnumerable<WebProduct> GetAllProductsExcludingIds(IList<long> idsToExclude)
+        public IEnumerable<WebProduct> GetAllProductsExcludingIds(IList<string> idsToExclude)
         {
             throw new System.NotImplementedException();
         }
 
-        public long CreateProduct(WebProduct entity, List<ExcludedFields> excludedFields = null)
+        public string CreateProduct(WebProduct entity, List<ExcludedFields> excludedFields = null)
         {
             throw new System.NotImplementedException();
         }
 
-        public long UpdateProduct(long id, WebProduct entity, List<ExcludedFields> excludedFields = null)
+        public string UpdateProduct(string id, WebProduct entity, List<ExcludedFields> excludedFields = null)
         {
             throw new System.NotImplementedException();
         }
@@ -69,11 +69,11 @@ namespace WebApi.Contexts
             return new List<WebProduct>();
         }
 
-        public long GetMaxProductId()
+        public string GetMaxProductId()
         {
             throw new System.NotImplementedException();
         }
-        public long GetTotalProductsCount(string searchTerm)
+        public string GetTotalProductsCount(string searchTerm)
         {
             throw new System.NotImplementedException();
         }
@@ -83,19 +83,19 @@ namespace WebApi.Contexts
             throw new NotImplementedException();
         }
 
-        public IEnumerable<WebProduct> GetVariationProductsByVariableId(long variableId)
+        public IEnumerable<WebProduct> GetVariationProductsByVariableId(string variableId)
         {
             throw new NotImplementedException();
         }
-        public void UpdateVariationProduct(long variableId, WebProduct variationProduct, List<ExcludedFields> excludedFields = null)
+        public void UpdateVariationProduct(string variableId, WebProduct variationProduct, List<ExcludedFields> excludedFields = null)
         {
             throw new NotImplementedException();
         }
-        public long CreateVariableProduct(WebProduct variableProduct, List<ExcludedFields> excludedFields = null)
+        public string CreateVariableProduct(WebProduct variableProduct, List<ExcludedFields> excludedFields = null)
         {
             throw new NotImplementedException();
         }
-        public long CreateVariationProduct(long variableId, WebProduct variationProduct, List<ExcludedFields> excludedFields = null)
+        public string CreateVariationProduct(string variableId, WebProduct variationProduct, List<ExcludedFields> excludedFields = null)
         {
             throw new NotImplementedException();
         }
@@ -103,7 +103,7 @@ namespace WebApi.Contexts
 
         #region Category
 
-        public WebCategory GetCategoryById(long id)
+        public WebCategory GetCategoryById(string id)
         {
             throw new System.NotImplementedException();
         }
@@ -113,17 +113,17 @@ namespace WebApi.Contexts
             throw new System.NotImplementedException();
         }
 
-        public IEnumerable<WebCategory> GetAllCategoriesExcludingIds(IList<long> idsToExclude)
+        public IEnumerable<WebCategory> GetAllCategoriesExcludingIds(IList<string> idsToExclude)
         {
             throw new System.NotImplementedException();
         }
 
-        public long CreateCategory(WebCategory entity, List<ExcludedFields> excludedFields = null)
+        public string CreateCategory(WebCategory entity, List<ExcludedFields> excludedFields = null)
         {
             throw new System.NotImplementedException();
         }
 
-        public long UpdateCategory(long id, WebCategory entity, List<ExcludedFields> excludedFields = null)
+        public string UpdateCategory(string id, WebCategory entity, List<ExcludedFields> excludedFields = null)
         {
             throw new System.NotImplementedException();
         }
@@ -133,7 +133,7 @@ namespace WebApi.Contexts
             throw new System.NotImplementedException();
         }
 
-        public long GetMaxCategoryId()
+        public string GetMaxCategoryId()
         {
             throw new System.NotImplementedException();
         }
@@ -143,12 +143,12 @@ namespace WebApi.Contexts
             throw new System.NotImplementedException();
         }
 
-        public long CreateCustomer(WebCustomer entity)
+        public string CreateCustomer(WebCustomer entity)
         {
             throw new System.NotImplementedException();
         }
 
-        public long GetTotalCategoriesCount(string searchTerm)
+        public string GetTotalCategoriesCount(string searchTerm)
         {
             throw new System.NotImplementedException();
         }
@@ -157,25 +157,25 @@ namespace WebApi.Contexts
             throw new System.NotImplementedException();
         }
 
-        public WebCustomer GetCustomerById(long id)
+        public WebCustomer GetCustomerById(string id)
         {
             throw new System.NotImplementedException();
         }
 
-        public IEnumerable<WebOrder> GetAllOrdersExcludeById(IEnumerable<long> idsToExclude, DateTime? startDate, DateTime? endDate)
+        public IEnumerable<WebOrder> GetAllOrdersExcludeById(IEnumerable<string> idsToExclude, DateTime? startDate, DateTime? endDate)
         {
             throw new NotImplementedException();
         }
-        public IEnumerable<WebOrder> GetOrdersByFilters(DateTime? startDate, DateTime? endDate, IEnumerable<long> idsToExclude = null, IEnumerable<OrderStatus> orderStatuses = null)
+        public IEnumerable<WebOrder> GetOrdersByFilters(DateTime? startDate, DateTime? endDate, IEnumerable<string> idsToExclude = null, IEnumerable<OrderStatus> orderStatuses = null)
         {
             throw new NotImplementedException();
         }
 
         public IEnumerable<WebOrder> GetOrdersBySearch(
-            IEnumerable<long> idsToExclude,
+            IEnumerable<string> idsToExclude,
             string searchTerm,
             IEnumerable<OrderStatus> statuses,
-            long? customerId, 
+            string customerId, 
             decimal totalMin, 
             decimal totalMax,
             DateTime startDate, 
@@ -195,7 +195,7 @@ namespace WebApi.Contexts
         {
             throw new System.NotImplementedException();
         }
-        public IEnumerable<KeyValuePair<long, string>> GetCustomerIdAndNameBySearch(
+        public IEnumerable<KeyValuePair<string, string>> GetCustomerIdAndNameBySearch(
             string searchTerm,
             int page = 1,
             int pageSize = 10,
@@ -226,7 +226,7 @@ namespace WebApi.Contexts
             throw new NotImplementedException();
         }
 
-        public void UpdateOrderStatus(long orderId, OrderStatus status)
+        public void UpdateOrderStatus(string orderId, OrderStatus status)
         {
             throw new NotImplementedException();
         }

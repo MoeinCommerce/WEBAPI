@@ -13,48 +13,48 @@ namespace WebApi.Contexts.Interfaces
         bool ValidateConnection();
         #region Product
 
-        WebProduct GetProductById(long id);
+        WebProduct GetProductById(string id);
         IEnumerable<WebProduct> GetAllProducts();
-        IEnumerable<WebProduct> GetAllProductsExcludingIds(IList<long> idsToExclude);
-        long CreateProduct(WebProduct entity, List<ExcludedFields> excludedFields = null);
-        long UpdateProduct(long id, WebProduct entity, List<ExcludedFields> excludedFields = null);
-        long GetTotalProductsCount(string searchTerm);
+        IEnumerable<WebProduct> GetAllProductsExcludingIds(IList<string> idsToExclude);
+        string CreateProduct(WebProduct entity, List<ExcludedFields> excludedFields = null);
+        string UpdateProduct(string id, WebProduct entity, List<ExcludedFields> excludedFields = null);
+        string GetTotalProductsCount(string searchTerm);
         IEnumerable<WebProduct> GetAllProductsWithFields(ProductTypes productType);
         IEnumerable<WebProduct> SearchProducts(string searchTerm, ProductTypes productType, int page = 1, int pageSize = 10, int maxPage = 1);
-        long GetMaxProductId();
-        long GetTotalCategoriesCount(string searchTerm);
+        string GetMaxProductId();
+        string GetTotalCategoriesCount(string searchTerm);
 
         #endregion
 
         #region  VariableProduct
-        long CreateVariableProduct(WebProduct variableProduct, List<ExcludedFields> excludedFields = null);
-        long CreateVariationProduct(long variableId, WebProduct variationProduct, List<ExcludedFields> excludedFields = null);
+        string CreateVariableProduct(WebProduct variableProduct, List<ExcludedFields> excludedFields = null);
+        string CreateVariationProduct(string variableId, WebProduct variationProduct, List<ExcludedFields> excludedFields = null);
         IEnumerable<WebProduct> GetVariableProductsBySearch(string searchTerm);
-        IEnumerable<WebProduct> GetVariationProductsByVariableId(long variableId);
-        void UpdateVariationProduct(long variableId, WebProduct variationProduct, List<ExcludedFields> excludedFields = null);
+        IEnumerable<WebProduct> GetVariationProductsByVariableId(string variableId);
+        void UpdateVariationProduct(string variableId, WebProduct variationProduct, List<ExcludedFields> excludedFields = null);
 
         #endregion
 
         #region Category
-        WebCategory GetCategoryById(long id);
+        WebCategory GetCategoryById(string id);
         IEnumerable<WebCategory> GetAllCategories();
-        IEnumerable<WebCategory> GetAllCategoriesExcludingIds(IList<long> idsToExclude);
-        long CreateCategory(WebCategory entity, List<ExcludedFields> excludedFields = null);
-        long UpdateCategory(long id, WebCategory entity, List<ExcludedFields> excludedFields = null);
+        IEnumerable<WebCategory> GetAllCategoriesExcludingIds(IList<string> idsToExclude);
+        string CreateCategory(WebCategory entity, List<ExcludedFields> excludedFields = null);
+        string UpdateCategory(string id, WebCategory entity, List<ExcludedFields> excludedFields = null);
         IList<WebCategory> GetAllCategoriesWithFields(IList<string> fields);
-        long GetMaxCategoryId();
+        string GetMaxCategoryId();
         IList<WebCategory> SearchCategories(string searchTerm, int page = 1, int pageSize = 10, int maxPage = 1);
 
         #endregion
 
         #region Customers
 
-        long CreateCustomer(WebCustomer entity);
+        string CreateCustomer(WebCustomer entity);
         IEnumerable<WebCustomer> SearchCustomers(string searchTerm, int page = 1, int pageSize = 10, int maxPage = 1);
         IEnumerable<WebCustomer> GetAllCustomersWithFields(IList<string> fields);
-        WebCustomer GetCustomerById(long id);
+        WebCustomer GetCustomerById(string id);
 
-        IEnumerable<KeyValuePair<long, string>> GetCustomerIdAndNameBySearch(string searchTerm, int page = 1, int pageSize = 10,
+        IEnumerable<KeyValuePair<string, string>> GetCustomerIdAndNameBySearch(string searchTerm, int page = 1, int pageSize = 10,
             int maxPage = 1);
         
 
@@ -62,13 +62,13 @@ namespace WebApi.Contexts.Interfaces
         
         # region Orders
         
-        IEnumerable<WebOrder> GetAllOrdersExcludeById(IEnumerable<long> idsToExclude, DateTime? startDate, DateTime? endDate);
-        IEnumerable<WebOrder> GetOrdersByFilters(DateTime? startDate, DateTime? endDate, IEnumerable<long> idsToExclude = null, IEnumerable<OrderStatus> orderStatuses = null);
+        IEnumerable<WebOrder> GetAllOrdersExcludeById(IEnumerable<string> idsToExclude, DateTime? startDate, DateTime? endDate);
+        IEnumerable<WebOrder> GetOrdersByFilters(DateTime? startDate, DateTime? endDate, IEnumerable<string> idsToExclude = null, IEnumerable<OrderStatus> orderStatuses = null);
         IEnumerable<WebOrder> GetOrdersBySearch(
-            IEnumerable<long> idsToExclude,
+            IEnumerable<string> idsToExclude,
             string searchTerm,
             IEnumerable<OrderStatus> statuses,
-            long? customerId,
+            string customerId,
             decimal totalMin,
             decimal totalMax,
             DateTime startDate,
@@ -76,7 +76,7 @@ namespace WebApi.Contexts.Interfaces
             int page = 1,
             int pageSize = 10,
             int maxPage = 1);
-        void UpdateOrderStatus(long orderId, OrderStatus status);
+        void UpdateOrderStatus(string orderId, OrderStatus status);
         #endregion
 
         #region PaymentMethods
