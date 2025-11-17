@@ -9,7 +9,7 @@ namespace WebApi.Models
 {
     public class WebProduct
     {
-        public long Id { get; set; }
+        public string Id { get; set; }
         public string Name { get; set; }
         public string Slug { get; set; }
         public DateTime DateCreated { get; set; }
@@ -30,7 +30,7 @@ namespace WebApi.Models
     }
     public class Attribute
     {
-        public long Id { get; set; }
+        public string Id { get; set; }
         public string Name { get; set; }
         public string Value { get; set; }
     }
