@@ -13,7 +13,7 @@ namespace WebApi.Models
         public string Id { get; set; }
         public decimal RegularPrice { get; set; }
         public decimal? SalePrice { get; set; }
-        public int PriceLevelId { get; set; }
+        public string PriceLevelId { get; set; }
         public PriceLevel PriceLevel { get; set; }
     }
     public class PriceLevel
